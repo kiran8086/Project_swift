@@ -89,7 +89,7 @@ print(string_return("kiran","richujain"))
  
  Write a Swift program that accept two strings and return their concatenation, except the first char of each string. The given strings length must be at least 1.
  
-*/
+
 
 print("Enter the 1st String")
 var str1: String?
@@ -101,6 +101,18 @@ str1!.removeFirst()
 str2!.removeFirst()
 print(str1!+str2!)
 
+............................................................
+ 
+ Write a Swift program to move the first two characters of a given string to the end. The given string length must be at least 2.
+
+ */
+
+print("Enter the String")
+var str1: String?
+str1 = readLine()
+var var1 = str1!.prefix(2)
+str1!.removeFirst(2)
+print("The Result is : \(str1!+var1)")
 
 
 
