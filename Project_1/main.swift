@@ -70,7 +70,7 @@ print(str1 ?? 1)
 
  7 : Write a Swift program that accept two strings of different length and return a string of the form short+long+short. Two given string's length may be 0.
 
- */
+ 
 func string_return(_ Str1: String, _ Str2: String) -> String
 {
     if Str1.count < Str2.count
@@ -85,11 +85,21 @@ func string_return(_ Str1: String, _ Str2: String) -> String
     
 print(string_return("kiran","richujain"))
 
-    
+...........................................................
+ 
+ Write a Swift program that accept two strings and return their concatenation, except the first char of each string. The given strings length must be at least 1.
+ 
+*/
 
-
-
-
+print("Enter the 1st String")
+var str1: String?
+str1 = readLine()
+print("Enter the 2nd String")
+var str2: String?
+str2 = readLine()
+str1!.removeFirst()
+str2!.removeFirst()
+print(str1!+str2!)
 
 
 
