@@ -58,10 +58,12 @@ var str1: String?
 str1 = readLine()
 let result1 = str1!.removeFirst()
 let result2 = str1!.removeLast()
+print("The 1st value of the String is")
 print(result1)
+print("The last value of the String is")
 print(result2)
-let final_result = str1
-print(final_result)
+print("The resultant String is")
+print(str1 ?? 1)
 
 
 
