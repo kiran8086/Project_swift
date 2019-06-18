@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//kkk
+/*
 print("Hello, World!")
 
 import Foundation
@@ -15,8 +15,18 @@ import Foundation
 func html_tags(_ tag: String, _ text: String) -> String
 {
     let opening_tag = "<\(tag)>"
-    let closing_tag = ""
-    return "\(opening_tag)\(text)\(closing_tag)"
+    return "\(opening_tag)\(text)"
 }
 print(html_tags("i", "HTML"))
 print(html_tags("b", "Swift"))
+*/
+var opening_tag: String?
+var closing_tag: String?
+print("Enter the 1st String ")
+opening_tag = readLine()
+print("Enter the 2nd String ")
+closing_tag = readLine()
+print("<i>\(opening_tag!)")
+print("<b>\(closing_tag!)")
+
+
