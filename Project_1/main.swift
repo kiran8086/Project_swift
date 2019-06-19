@@ -7,6 +7,50 @@
 //
 
 import Foundation
+
+/*
+ 
+ //.....................
+ 
+ struct markStruct {
+ var mark1: Int
+ var mark2: Int
+ var mark3: Int
+ 
+ init(mark1: Int, mark2: Int, mark3: Int) {
+ self.mark1 = mark1
+ self.mark2 = mark2
+ self.mark3 = mark3
+ }
+ func avg_marks()
+ {
+ var result: Int = 0
+ result = ((mark1+mark2+mark3)/3)
+ print(result)
+ }
+ 
+ }
+ 
+ func avg2(mk: markStruct) -> Int
+ {
+ var result: Int = 0
+ result = ((mk.mark1+mk.mark2+mk.mark3)/3)
+ return(result)
+ }
+ 
+ 
+ var mar = markStruct(mark1: 98, mark2: 96, mark3:100)
+ print(mar.mark1)
+ print(mar.mark2)
+ print(mar.mark3)
+ mar.avg_marks()
+ 
+
+ 
+ */
+
+
+
 /* program 1
  
 var opening_tag: String?
@@ -105,7 +149,7 @@ print(str1!+str2!)
  
  Write a Swift program to move the first two characters of a given string to the end. The given string length must be at least 2.
 
- */
+ 
 
 print("Enter the String")
 var str1: String?
@@ -113,7 +157,21 @@ str1 = readLine()
 var var1 = str1!.prefix(2)
 str1!.removeFirst(2)
 print("The Result is : \(str1!+var1)")
+...........................................................
+ 
+ 
+Write a Swift program to move the last two characters of a given string to the start. The given string length must be at least 2.
 
+*/
+
+print("Enter the String")
+var str1: String?
+str1 = readLine()
+var c = str1!.count
+var var1 = str1!.prefix(c-2)
+str1!.removeLast(2)
+print(var1)
+print("The result is : \(str1!+var1)")
 
 
 
