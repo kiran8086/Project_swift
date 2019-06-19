@@ -168,10 +168,11 @@ print("Enter the String")
 var str1: String?
 str1 = readLine()
 var c = str1!.count
+var str2: String = str1!
 var var1 = str1!.prefix(c-2)
-str1!.removeLast(2)
-print(var1)
-print("The result is : \(str1!+var1)")
+str1!.removeFirst(c-2)
+str2.removeLast(2)
+print(str1!+str2)
 
 
 
