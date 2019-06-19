@@ -158,11 +158,11 @@ var var1 = str1!.prefix(2)
 str1!.removeFirst(2)
 print("The Result is : \(str1!+var1)")
 ...........................................................
- 
+
  
 Write a Swift program to move the last two characters of a given string to the start. The given string length must be at least 2.
 
-*/
+
 
 print("Enter the String")
 var str1: String?
@@ -173,6 +173,20 @@ var var1 = str1!.prefix(c-2)
 str1!.removeFirst(c-2)
 str2.removeLast(2)
 print(str1!+str2)
+
+.................................................................
+
+ 
+Write a Swift program to create a new string without the first and last character of a given string. The string may be any length, including 0.
+
+ */
+
+print("Enter the String")
+var str1: String?
+str1 = readLine()
+str1!.removeFirst()
+str1!.removeLast()
+print("the new string is: \(str1!)")
 
 
 
