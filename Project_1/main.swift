@@ -191,8 +191,10 @@ print("the new string is: \(str1!)")
 ....................................................................
 
  Write a Swift program to create a new string taking the middle two characters of a given string of even length. The given string length must be at least 2.
+....................................................................
+
  
- */
+ 
 print("Enter the String")
 var str1: String?
 str1 = readLine()
@@ -210,4 +212,138 @@ else
 print(" Opps , I didnt found it ")
 }
 
+ .....................................................................
+
+
+
+
+
+
+
+                                  //Excercise 3 : Functions
+
+
+
+
+.....................................................................
+
+  1 :  Write a function named min2 that takes two Int values, a and b, and returns the smallest one.
+
+
+func min2(a: Int, b: Int) -> Int
+{
+    if a > b
+    {
+        print("The largest is :")
+        return a
+    }
+    else
+    {
+        print("The largest is :")
+        return b
+    }
+}
+print(min2(a: 2,b: 4))
+
+ .....................................................................
+
+ 
+ 2 :
+
+
+for i in 1...10
+{
+if(i == 5)
+{
+    sleep(5)
+    print("Hi, I slept for 5 sec's and and printed : \(5)")
+}
+else
+{
+    print(i)
+}
+}
+
+ 
+
+
+
+func divides(_ a: Int, _ b: Int) -> Bool {
+    return a % b == 0
+}
+
+func countDivisors(_ number: Int) -> Int {
+    var cnt = 0
+    for i in 1...number {
+        if divides(number, i)
+        {
+            cnt += 1
+        }
+    }
+    return cnt
+}
+
+func isPrime(_ number: Int) -> Bool {
+    return countDivisors(number) == 2
+}
+*/
+//...................................................
+/*
+func isPrime(a: Int, b: Int) -> Bool
+{
+        return a % b == 0
+}
+func isprime2(a: Int = 2)
+{
+for i in 1...a
+{
+    if(isPrime(a: a,b: i))
+    {
+        print("Prime")
+    }
+    else
+    {
+        print("Not prime")
+    }
+}
+}
+print(isPrime(a: 4, b: 2))
+print(isprime2(a: 2))
+
+
+func reverse(_ numbers: [Int]) -> [Int]
+{
+    var reversed: [Int] = []
+    for i in numbers
+    {
+        reversed.insert(i,at: 0)
+    }
+    
+    return reversed
+}
+print(reverse([1,2,3,4,5,6]))
+
+ */
+
+func parse(digit: String) -> Int {
+    let digits = "0123456789"
+    
+    var result = 0
+    
+    for i in digits
+    {
+        let d = "\(i)"
+        if d == digit {
+        result += 1
+        return result
+
+    }
+        
+    }
+    
+    return -1
+}
+
+print(parse(digit: "1"))
+print(parse(digit: "1"))
 
