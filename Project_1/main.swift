@@ -179,7 +179,7 @@ print(str1!+str2)
  
 Write a Swift program to create a new string without the first and last character of a given string. The string may be any length, including 0.
 
- */
+ 
 
 print("Enter the String")
 var str1: String?
@@ -187,7 +187,27 @@ str1 = readLine()
 str1!.removeFirst()
 str1!.removeLast()
 print("the new string is: \(str1!)")
+ 
+....................................................................
 
-
+ Write a Swift program to create a new string taking the middle two characters of a given string of even length. The given string length must be at least 2.
+ 
+ */
+print("Enter the String")
+var str1: String?
+str1 = readLine()
+var c = str1!.count
+var var1 = str1!.prefix(2)
+var str3: String = "ab"
+//var str2 = str1
+str1?.removeFirst(2)
+if ( var1 == str3)
+{
+print(" Hi , I found it ")
+}
+else
+{
+print(" Opps , I didnt found it ")
+}
 
 
