@@ -323,7 +323,7 @@ func reverse(_ numbers: [Int]) -> [Int]
 }
 print(reverse([1,2,3,4,5,6]))
 
- */
+ 
 
 func parse(digit: String) -> Int {
     let digits = "0123456789"
@@ -346,4 +346,183 @@ func parse(digit: String) -> Int {
 
 print(parse(digit: "1"))
 print(parse(digit: "1"))
+
+
+
+
+
+let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
+
+let multiples = numbers.filter { $0 % 3 == 0 }
+
+print(multiples)
+
+
+
+
+
+var kiran: (Int) -> (Int) = { x in
+
+    return 2 * x
+}
+print(kiran(5))
+
+var closure2: (Int) -> (Int) = {_ in
+    var x = 10
+while x < 10
+{
+print(x)
+x = x + 1
+}
+return(x)
+}
+
+
+
+let numbers = [4, 7, 1, 9, 6, 5, 6, 9]
+
+let max = numbers.reduce(numbers[0])
+{
+    if $0 > $1 {
+        return $0
+    } else {
+        return $1
+    }
+}
+
+print(max) // 9
+
+
+
+var numbers = [1, 2, 3, 4, 5, 6]
+
+numbers.sort(by: { x, y in
+    func countDivisors(_ number: Int) -> Int {
+        var count = 0
+        for i in 1...number {
+            if number % i == 0 {
+                count += 1
+            }
+        }
+        return count
+    }
+    return countDivisors(x) < countDivisors(y)
+})
+
+
+let strings = ["We", "Heart", "Swift"]
+
+let string = strings.reduce("") {
+    if $0 == "" {
+        return $1
+    } else {
+        return $0 + " " + $1
+    }
+}
+
+print(string)
+......................
+
+var noParameterAndNoReturnValue: () -> () = {
+    print("Hello!")
+}
+
+var noParameterAndReturnValue: () -> (Int) = {
+    return 1000
+}
+
+var oneParameterAndReturnValue: (Int) -> (Int) = { x in
+    return x % 10
+}
+
+var multipleParametersAndReturnValue: (String, String) -> (String) =
+{ (first, second) -> String in
+    return first + " " + second
+}
+
+var closure1: () -> () = {
+    print("hello") }
+
+var closure2: () -> (Int) = {
+return 100
+}
+
+var closure3: (Int) -> (Int) = { x in
+print("closure3")
+return x
+}
+
+var closure4: (Int, Int) -> (Int) =
+{ (first, second) -> Int in
+
+return first * second
+    }
+
+print(closure4(3, 4))
+.................
+ 
+ 
+
+var person1 = ("John", "Smith")
+
+var firstName = person1.0 // John
+var lastName = person1.1
+
+
+var person = ("kiran", "richu")
+var first = person.0
+var second = person.1
+
+var temp1 = (0,0)
+temp1.0 = 1
+temp1.1 = 2
+print(temp1.0)
+print(temp1.1)
+
+*/
+
+enum directions
+{
+case east
+case west
+case north
+case south
+}
+
+var getmedirections: directions = .north
+var getmedirections2: directions = .south
+var getme2nddirection = directions.south
+
+switch getmedirections2
+{
+case .east : print("The diection is east")
+case .north : print("The direction is \(directions.north)")
+case .south : print("The direction is \(directions.south)")
+case .west : print("The direction is west")
+}
+
+
+enum Beverage: CaseIterable {
+    case coffee, tea, juice
+}
+let numberOfChoices = Beverage.allCases.count
+print("\(numberOfChoices) beverages available")
+// Prints "3 beverages available"
+
+enum beverage2: CaseIterable {
+case pep, coke, fan, nestea
+}
+let nnn = beverage2.allCases.count
+print("\(nnn) beverages available")
+
+
+
+
+
+
+
+
+
+
+
 
