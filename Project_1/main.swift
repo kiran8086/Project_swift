@@ -479,7 +479,7 @@ temp1.1 = 2
 print(temp1.0)
 print(temp1.1)
 
-*/
+
 
 enum directions
 {
@@ -505,6 +505,7 @@ case .west : print("The direction is west")
 enum Beverage: CaseIterable {
     case coffee, tea, juice
 }
+
 let numberOfChoices = Beverage.allCases.count
 print("\(numberOfChoices) beverages available")
 // Prints "3 beverages available"
@@ -516,13 +517,37 @@ let nnn = beverage2.allCases.count
 print("\(nnn) beverages available")
 
 
+*/
 
 
+enum movement
+{
+case left
+case right
+case up
+case down
+}
+var coordinates = (x:0, y:0)
+var steps:[movement] = [.up, .down, .down, .right, .left]
+
+for i in steps
+{
+    switch(i)
+    {
+    case .up: coordinates.x+=1
+        break
+    case .down: coordinates.x-=1
+        break
+    case .left: coordinates.y+=1
+        break
+    case .right: coordinates.y-=1
+        break
+    }
+}
+print(coordinates)
 
 
-
-
-
-
+var x = (x:0, y:0)
+var y:[movement] = [.down]
 
 
