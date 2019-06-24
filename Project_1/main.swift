@@ -517,7 +517,7 @@ let nnn = beverage2.allCases.count
 print("\(nnn) beverages available")
 
 
-*/
+
 
 
 enum movement
@@ -550,4 +550,146 @@ print(coordinates)
 var x = (x:0, y:0)
 var y:[movement] = [.down]
 
+
+
+func diff_51(x: Int) -> Int {
+    if x > 51
+    {
+        return (x - 51) * 2
+    }
+    else
+    {
+        return 51 - x
+    }
+}
+
+print(diff_51(x: 45))
+print(diff_51(x: 61))
+print(diff_51(x: 21))
+
+
+
+
+3. Write a Swift program that accept two integer values and return true if one of them is 20 or if their sum is 20.
+
+
+print("Enter the 1st value")
+var aa: Int = 2
+var ba: Int = 3
+print("Enter the 2nd value")
+let cc = aa + ba
+if (aa == 20) || (cc == 20)
+{
+print("true")
+}
+else
+{
+print("false")
+
+}
+
+print("Enter the string")
+var str1: String?
+str1 = readLine()
+let a = str1?.count
+print("the given string\(str1!) has \(a ?? 0) length ")
+print("Enter the index position of the string that you want to remove")
+var index: String?
+index = readLine()
+var b: Int?
+b = Int(index!)
+var c = str1!
+let index1 = str1!.index(str1!.startIndex, offsetBy: b!)
+c.remove(at: index1)
+print(c)
+
+
+
+Write a Swift program to create a new string taking the middle two characters of a given string of even length. The given string length must be at least 2.
+    ....................................................................
+    
+ 
+    
+print("Enter the String")
+var str1: String?
+str1 = readLine()
+var c = str1!.count
+var d = c / 2
+//print(c)
+//print(d)
+var str2 = str1!
+//str1!.removeFirst(str1!.count / 2 - 1)
+//print(str1!)
+//str1!.removeFirst(str1!.count / 2 + 1)
+//print(str1!)
+var e = str1!.prefix(str1!.count / 2)
+print(e)
+str1!.removeFirst(str1!.count / 2 + 2)
+print(str1!)
+print(e + str1!)
+
+ 
+
+func divides(_ a: Int, _ b: Int) -> Bool {
+    return a % b == 0
+}
+
+func countDivisors(_ number: Int) -> Int {
+    var cnt = 0
+    for i in 1...number {
+        if divides(number, i)
+        {
+            cnt += 1
+        }
+    }
+    return cnt
+}
+
+func isPrime(_ number: Int) -> Bool {
+    return countDivisors(number) == 2
+}
+
+
+
+
+func array1(_ numbers: [Int]) -> [Int]
+{
+     var new_array: [Int] = []
+     for i in numbers
+     {
+        new_array.insert(i, at: 0)
+     }
+    
+    
+    return(new_array)
+}
+
+print(array1([1,2,3,4,5,6]))
+
+
+
+
+
+*/
+
+var closure1 = {
+    print("hi")
+}
+var closure2 = { () -> Int in
+    return 100
+}
+
+
+var closure3 = { (x: Int) -> Int
+    
+    return x * 10
+}
+print(closure3(4))
+
+
+
+var closure4 = { (a: String, b: String) -> String in
+    
+return a + b
+}
 
