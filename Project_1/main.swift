@@ -757,7 +757,9 @@ print(max) // 9
 
 */
 
-
+//...........................................
+//...........................................
+//...........................................
 
 
 //1. Write a Swift program to compute the sum of the two integers. If the values are equal return the triple their sum.
@@ -1249,226 +1251,12 @@ for _ in 1...5
 //28. Write a Swift program to test whether a value presents sequentially three times in an array of integers or not.
 
 
-// Write a function named min2 that takes two Int values, a and b, and returns the smallest one.
-
-
-/*
- 
- print("Hello, World!")
- import Foundation
- var str1:String?
- var str2:String?
- var x:Int?
- var y:Int?
- print("enter 1st value")
- str1=readLine()
- x=Int(str1!)
- print("enter 2nd value")
- str2=readLine()
- y=Int(str2!)
- func min2(x:Int , y:Int) -> Int{
- return(x>y  ? x:y)
- 
- }
- 
- print(min2(x: x!,y: y!))
- */
-
-//Write a function that takes an Int and returns it’s last digit. Name the function lastDigit.
-/*
- import Foundation
- var str1: String?
- var int1: Int?
- str1=readLine()
- int1=Int(str1!)
- var y :Int?
- y=int1!
- func lastDigit(y:Int) -> Int{
- return(y%10)
- }
- print(lastDigit(y:y!))
- */
-
-
-
-//Write a function named countdown that takes a number N. The function should print the numbers from N to 1with a one second pause in between and then write GO! in the end. To make the computer wait for one second call thesleep function from the standard library. The sleep function takes one parameter, the number of seconds to sleep.
-/*
- import Foundation
- var str1:String?
- var n:Int?
- print("enter value")
- str1=readLine()
- n=Int(str1!)
- func countdown(n:Int)
- {
- var a = n
- 
- while(a>0)
- {
- print(a)
- sleep(2)
- a=a-1
- }
- print("Go!")
- }
- print(countdown(n:n!))
- 
- */
-
-//Implement the following functions. The divides function returns true if a is divisible by b and false otherwise. The countDivisors function should use the divides function to return the number of divisors of number. TheisPrime function should use the countDivisors function to determine if number is prime.
-/*
- import Foundation
- var str1:String?
- var str2:String?
- var x:Int?
- var y:Int?
- print("enter 1st value")
- str1=readLine()
- x=Int(str1!)
- print("enter 2nd value")
- str2=readLine()
- y=Int(str2!)
- func divides(x:Int,y:Int)->Bool{
- return(x%y==0)
- }
- print(divides(x:x!,y:y!))
- func countdivisor(x:Int)->Int{
- var c=0
- for i in 1...x
- {
- if(divides(x: x,y: i)){
- c+=1
- }
- }
- return(c)
- }
- print(countdivisor(x:x!))
- func prime(x:Int)->Bool{
- return(countdivisor(x: x)==2)
- }
- print(prime(x:x!))
- */
-// Using isPrime write a function named printFirstPrimes that takes a parameter named count of type Int that prints the first count prime numbers.
-/*
- 
- import Foundation
- 
- print("Hello World")
- func isprime(x:Int)->Int{
- var c=0
- 
- for nun in 1...100{
- if(x%nun == 0){
- c+=1}
- }
- if c<=2{
- print("prime number")
- }
- else{
- print("not prime")
- }
- 
- return(c)}
- 
- print(isprime(x:24))
- 
- */
-
-//Implement a function named repeatPrint that takes a string message and a integer count as parameters. The function should print the message count times and then print a newline.
-/*
- print("enter count value")
- var str1=readLine()!
- var count=Int(str1)
- print("enter the string")
- var str2=readLine()!
- func repeatprint(str2:String,count:Int){
- var x=count
- while(x>1){
- print(str2)
- x=x-1
- }
- }
- 
- 
- print(repeatprint(str2: str2, count: count!))
- 
- 
- */
-// Write a function named reverse that takes an array of integers named numbers as a parameter. The function should return an array with the numbers from numbers in reverse order.
-/*
- import Foundation
- 
- func reverse(numbers:[Int])->[Int]{
- 
- print(numbers)
- 
- let revary = Array(numbers.reversed())
+ //....................................................
+ //.......................................................
+ //.....................................................
  
  
  
- return(revary)
- 
- }
- 
- var numbers:[Int]=[]
- 
- print("enter elements")
- 
- for i in 1...5{
- 
- var a=readLine()!
- 
- var x=Int(a)
- 
- numbers.append(x!)
- 
- //print(numbers)
- 
- }
- 
- print(reverse (numbers: numbers))
- 
- */
-
-
-
-
-//Write a function named sum that takes an array of integers and returns their sum.
-/*
- 
- import Foundation
- func sum(numbers:[Int])->Int{
- 
- let total = numbers.reduce(0, +)
- 
- return(total)
- 
- }
- 
- var numbers:[Int]=[]
- //print("enter elements")
- 
- print("enter elements")
- 
- for i in 1...5{
- 
- 
- var a=readLine()!
- 
- 
- var x=Int(a)
- 
- 
- numbers.append(x!)
- 
- }
- print(sum (numbers: numbers))
- */
-// Write a function named parse(digit:) that takes a string with one character as parameter. The function should return -1 if the input is not a digit character and the digit otherwise.
-
-
-..........................................................................................
- kiran
  
 
 //1. Write a Swift program to draw a HTML string as bold or italic text.
@@ -1815,7 +1603,7 @@ print(move(s!))
  var a = readLine()
  print(copies(a!))
  
- */
+
 
  
 //21 Write a Swift program to check if the first or last characters are 'a' of a given string, return the given string without those 'a' characters, and otherwise return the given string.
@@ -1839,6 +1627,205 @@ print(move(s!))
  var a = readLine()
  print(check(a!))
  
+
+
+//.................................................................
+//.................................................................
+//.................................................................
+
+
+
+
+// 1 Write a function named min2 that takes two Int values, a and b, and returns the smallest one.
+
+
+ var a:String?
+ var b:String?
+ var q:Int?
+ var w:Int?
+ print("enter 1st number")
+ a=readLine()
+ q=Int(a!)
+ print("enter 2nd number")
+ b=readLine()
+ w=Int(b!)
+ func min2(q:Int , w:Int) -> Int{
+ return(q>w  ? q:w)
+ }
+ print(min2(q: q!,w: w!))
+ 
+ 
+
+// 2 Write a function that takes an Int and returns it’s last digit. Name the function lastDigit.
+
+ print("Enter the 1st value")
+ var a: String?
+ var q: Int?
+ a=readLine()
+ q=Int(a!)
+ var y :Int?
+ y=q!
+ func lastDigit(y:Int) -> Int
+ {
+ return(y%10)
+ }
+ print(lastDigit(y:y!))
+
+
+
+
+// 3 Write a function named countdown that takes a number N. The function should print the numbers from N to 1with a one second pause in between and then write GO! in the end. To make the computer wait for one second call thesleep function from the standard library. The sleep function takes one parameter, the number of seconds to sleep.
+
+ var a:String?
+ var b:Int?
+ print("enter the number")
+ a=readLine()
+ b=Int(a!)
+ func countdown(n:Int)
+ {
+ var a = b
+ while(a>0)
+ {
+ print(a)
+ sleep(6)
+ a=a-1
+ }
+ print("Here I Go...!!!")
+ }
+ print(countdown(b:b!))
+ 
+ 
+
+//4 Implement the following functions. The divides function returns true if a is divisible by b and false otherwise. The countDivisors function should use the divides function to return the number of divisors of number. TheisPrime function should use the countDivisors function to determine if number is prime.
+
+
+ var s1:String?
+ var s2:String?
+ var a:Int?
+ var b:Int?
+ print("enter 1st value")
+ s1=readLine()
+ a=Int(s1!)
+ print("enter 2nd value")
+ s2=readLine()
+ b=Int(s2!)
+ func divides(a:Int,b:Int)->Bool
+ {
+ return(a%b==0)
+ }
+ print(divides(a:a!,b:b!))
+ func countdivisor(a:Int)->Int{
+ var c=0
+ for i in 1...a
+ {
+ if(divides(a: a,b: i))
+ {
+ c+=1
+ }
+ }
+ return(c)
+ }
+ print(countdivisor(a:a!))
+ func prime(a:Int)->Bool
+ {
+ return(countdivisor(a: a)==2)
+ }
+ print(prime(a:a!))
+
+
+// 5 Using isPrime write a function named printFirstPrimes that takes a parameter named count of type Int that prints the first count prime numbers.
+
+ 
+
+ func isprime(a:Int)->Int
+ {
+ var c=0
+ for i in 1...100
+ {
+ if( a % i == 0)
+ {
+ c+=1
+ }
+ }
+ if (c <= 2)
+ {
+ print("The number is a prime number")
+ }
+ else
+ {
+ print("The number is not a prime number")
+ }
+ return(c)
+ }
+ 
+ print(isprime(a:24))
+ 
+ 
+
+//6 : Implement a function named repeatPrint that takes a string message and a integer count as parameters. The function should print the message count times and then print a newline.
+
+ print("Please enter the count")
+ var a=readLine()!
+ var c=Int(a)
+ print("Enter the string")
+ var b=readLine()!
+ func repeatPrint(b:String,c:Int)
+ {
+ var x=c
+ while(x>1)
+ {
+ print(b)
+ x=x-1
+ }
+ }
+ print(repeatPrint(b: b, c: c!))
+ 
+ 
+ 
+
+// 7 Write a function named reverse that takes an array of integers named numbers as a parameter. The function should return an array with the numbers from numbers in reverse order.
+
+ 
+  func reverse(numbers:[Int])->[Int]
+  {
+  print(numbers)
+  let r = Array(numbers.reversed())
+  return(r)
+  }
+  var numbers:[Int]=[]
+  print("enter the values in the array")
+  for _ in 1...5
+  {
+    let a=readLine()!
+    let x=Int(a)
+    numbers.append(x!)
+  //print(numbers)
+  }
+  print(reverse (numbers: numbers))
+ 
+ 
+ */
+
+
+//Write a function named sum that takes an array of integers and returns their sum.
+
+ 
+ func sum(n1:[Int])->Int
+ {
+ let q = n1.reduce(0, +)
+ return(q)
+ }
+ var n1:[Int]=[]
+ print("enter elements")
+ for _ in 1...5
+ {
+    let a=readLine()!
+    let x=Int(a)
+    n1.append(x!)
+ }
+ print(sum(n1: n1))
+
+// Write a function named parse(digit:) that takes a string with one character as parameter. The function should return -1 if the input is not a digit character and the digit otherwise.
 
 
 
