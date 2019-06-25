@@ -1212,7 +1212,7 @@ for _ in 1...5
  
 
 //23. Write a Swift program to check if one of the first 4 elements in a given array of integers is a 7. The length of the array may be less than 4.
-*/
+
 
  var array1:[Int]=[]
  print("enter elements")
@@ -1235,7 +1235,11 @@ for _ in 1...5
  }
  print(array1)
 
-
+...............................................................................................
+ kiran
+ 
+ 
+ 
 //24. Write a Swift program to test if the sequence of numbers 0, 1, 2 appears in a given array of integers somewhere.
 
 //25. Write a Swift program to create a new string where all the character "a" have been removed except the first and last positions.
@@ -1249,7 +1253,6 @@ for _ in 1...5
 
 
 /*
- import Foundation
  
  print("Hello, World!")
  import Foundation
@@ -1464,4 +1467,384 @@ for _ in 1...5
 // Write a function named parse(digit:) that takes a string with one character as parameter. The function should return -1 if the input is not a digit character and the digit otherwise.
 
 
+..........................................................................................
+ kiran
+ 
 
+//1. Write a Swift program to draw a HTML string as bold or italic text.
+
+
+
+ func string1(_ tag: String, _ text: String) -> String {
+ let tag1 = "<\(tag)>"
+ let tag2 = ""
+ return "\(tag1)\(text)\(tag2)"
+ }
+ print(string1("i", "HTML"))
+ print(string1("b", "kiran"))
+
+
+ 
+//2. Write a Swift program to insert a given string to another given string where the second string will be in the middle of the first string.
+
+
+ func middle(_ str:String,_ insert:String) -> String
+ {
+    let a = str
+    let m = a.count/2
+ return "\(String(a.prefix(m)))\(insert)\(String(a.suffix(m)))"
+ 
+ }
+ print("Enter a string")
+ var str = readLine()
+ print("Enter a string")
+ var str1 = readLine()
+ print(middle(str!,str1!))
+ 
+
+ 
+ // 3. Write a Swift program to create a string made of two copies of the last two characters of a given string. The given string length must be at least 2.
+
+ print("Enter the string")
+ var a = readLine()
+ var b = String(a!.suffix(2))
+ b = b+b
+ print(b)
+
+
+ 
+//  4. Write a Swift program to create a new string made of a copy of the first two characters of a given string. If the given string is shorter than length 2, return whatever there is.
+
+ print("Enter the string")
+ var a = readLine()
+ var b = String(a!.prefix(2))
+ print(b)
+ 
+
+
+//5. Write a Swift program to return the first half of a given string of even length.
+
+
+ print("Enter a value")
+ var a  = readLine()
+ var b = String(a!.prefix(a!.count/2))
+ print(b)
+ 
+ 
+//6  6. Write a Swift program to create a new string without the first and last character of a given string. The string length must be at least 2.
+
+ print("Please Enter the string")
+ var a = readLine()
+ a!.removeFirst()
+ a!.removeLast()
+ print(a!)
+ 
+ 
+
+// 7. Write a Swift program that accept two strings of different length and return a string of the form short+long+short. Two given string's length may be 0.
+
+ print("Enter a string")
+ var a = readLine()
+ print("Enter a string")
+ var b = readLine()
+ 
+ var a1 = a!.count
+ var b1 = b!.count
+ 
+ if (a1>b1)
+ {
+    print("\(b!)\(a!)\(b!)")
+ }
+ else if (b1>a1)
+ {
+    print("\(a!)\(b!)\(a!)")
+ }
+ else
+ {
+    print("Invalid String")
+ }
+ 
+ 
+
+//8. Write a Swift program that accept two strings and return their concatenation, except the first char of each string. The given strings length must be at least 1.
+
+ 
+ 
+ func concatenation(_ a:String, _ b:String) -> String
+ {
+ var n1 = a.count
+ n1.removeFirst(1)
+ var n2 = b.count
+ n2.removeFirst(1)
+ return String(n1)+String(n2)
+ }
+ print("Enter a string")
+ var a = readLine()
+ print("Enter another string")
+ var b = readLine()
+ 
+ print(concatenation(a!,b!))
+ 
+
+
+//9. Write a Swift program to move the first two characters of a given string to the end. The given string length must be at least 2.
+
+ func first(_ a:String) -> String
+ {
+ var new = a
+    let q = new.removeFirst()
+    let w = new.removeFirst()
+ 
+ return "\(new)\(q)\(w)"
+ }
+ print("Enter a string")
+ var a = readLine()
+ print(first(a!))
+ 
+
+
+//10  Write a Swift program to move the last two characters of a given string to the start. The given string length must be at least 2.
+
+ 
+ func move(_ a:String) -> String
+ {
+ var s = a
+    let q = s.removeLast()
+    let w = s.removeLast()
+ 
+ return "\(q)\(w)\(s)"
+ }
+ print("Enter a string")
+ var s = readLine()
+print(move(s!))
+ 
+
+
+ 
+//11 Write a Swift program to create a new string without the first and last character of a given string. The string may be any length, including 0.
+
+ 
+ func first_char(_ a:String) -> String
+ {
+ var b = a
+ if(a.count==1)
+ {
+ return b
+ }
+ else if(a.count>1)
+ {
+ b.removeFirst()
+ b.removeLast()
+ return b
+ }
+ else
+ {
+ return " "
+ }
+ }
+ print("Enter the string")
+ var a = readLine()
+ print(first_char(a!))
+ 
+
+ 
+ //12  Write a Swift program to create a new string taking the middle two characters of a given string of even length. The given string length must be at least 2.
+ 
+ func middle(_ a:String) -> String
+ {
+    let q = a
+    let r = q.count/2-1
+    let t = q.count/2
+ return "\(q[q.index(q.startIndex, offsetBy: r)])\(q[q.index(q.startIndex, offsetBy: t)])"
+ }
+ print("Enter the string")
+ var a = readLine()
+ print(middle(a!))
+ 
+ 
+ 
+// 13. Write a Swift program to test if a given string starts with "ab".
+ 
+ func test(_ a:String) -> String
+ {
+ let q = a
+ if(q.starts(with: "ab"))
+ {
+ return "Result is true"
+ }
+ else
+ {
+ return "Result is False"
+ }
+ }
+ 
+ print("Enter the string")
+ var a = readLine()
+ print(test(a!))
+ 
+ 
+//14 Write a Swift program to create a new string made of the first and last n chars from a given string. The string length will be at least n.
+
+ 
+ func length(_ a:String,_ b:Int) -> String
+ {
+    _ = a
+ return "\(a.prefix(b))\(a.suffix(b))"
+ }
+ 
+ print("Enter a string")
+ var aa = readLine()
+ print("Enter a number")
+ var b = Int(readLine()!)
+ print(length(a!,b!))
+ 
+
+
+ 
+//15 Write a Swift program to create a new string of length three from a given string of odd length from its middle. The string length must be three.
+
+ 
+ func odd(_ a:String) -> String
+ {
+    let q = a
+ 
+    let first = (q.count/2)-1
+    let middle = q.count/2
+    let last = (q.count/2)+1
+ 
+    let aa = q[q.index(q.startIndex, offsetBy: first)]
+    let bb = q[q.index(q.startIndex, offsetBy: middle)]
+    let cc = q[q.index(q.startIndex, offsetBy: last)]
+ return "\(aa)\(bb)\(cc)"
+ }
+ 
+ print("Enter the string")
+ var h = readLine()
+ print(odd(h!))
+ 
+ 
+//16  Write a Swift program to concate two given strings and return the new string. If the new string creates a double character then omit one of the character. so "vwx" and "xyz" will return "vwxyz".
+
+ 
+ func concate(_ a:String,_ b:String) -> String
+ {
+ if(String(a.suffix(1))==String(b.prefix(1)))
+ {
+ return "\(String(a.dropLast()))\(b)"
+ }
+ else
+ {
+ return "\(a)\(b)"
+ }
+ }
+
+
+ 
+ print("Enter a string")
+ var aa = readLine()
+ print("Enter a string")
+ var bb = readLine()
+ print(concate(aa!,bb!))
+ 
+
+
+//17  Write a Swift program to create a new string of any length from a given string where the last two characters are swapped, so "abcde" will be "abced".
+
+ 
+ func swapped(_ a:String) -> String
+ {
+ var aa = a
+ var q = a.removeLast(1)
+ var w = a.removeLast(1)
+ return "\(a)\(q)\(w)"
+ }
+ print("Enter a string")
+ var a = readLine()
+ print(swapped(a!))
+ 
+ 
+ 
+//18  Write a Swift program to return "abc" or "xyz" if a given string begins with "abc" or "xyz" otherwise return the empty string.
+
+ func empty(_ a:String) -> String
+ {
+    let q = a
+ if(q.hasPrefix("xyz")||q.hasPrefix("abc"))
+ {
+ return String(q.prefix(3))
+ }
+ else
+ {
+ return " "
+ }
+ }
+ print("Enter a string")
+ var aa = readLine()
+ print(empty(aa!))
+ 
+ 
+ 
+//19  Write a Swift program to check if the first two characters are same of the last two characters of a given string.
+
+ func same(_ a:String) -> String
+ {
+ var q = a
+ if(String(q.prefix(2))==String(q.suffix(2)))
+ {
+ return "True"
+ }
+ else
+ {
+ return "False"
+ }
+ }
+ print("Enter a string")
+ var a = readLine()
+ print(same(a!))
+
+ 
+//20  Write a Swift program to create a new string made of 2 copies of the first 2 characters of a given string. The string may be any length.
+
+
+ func copies(_ a:String) -> String
+ {
+    let q = a
+ return "\(String(q.prefix(2)))\(String(q.prefix(2)))"
+ }
+ print("Enter a string")
+ var a = readLine()
+ print(copies(a!))
+ 
+ */
+
+ 
+//21 Write a Swift program to check if the first or last characters are 'a' of a given string, return the given string without those 'a' characters, and otherwise return the given string.
+ 
+ 
+ func check(_ a:String) -> String
+ {
+ var q = a
+ if(String(q.prefix(1))=="a")
+ {
+ q.removeFirst()
+ }
+ if(String(q.suffix(1))=="a")
+ {
+ q.removeLast()
+ }
+ return q
+ 
+ }
+ print("Enter the string")
+ var a = readLine()
+ print(check(a!))
+ 
+
+
+
+
+
+
+ 
+ 
+ 
