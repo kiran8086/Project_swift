@@ -670,7 +670,7 @@ print(array1([1,2,3,4,5,6]))
 
 
 
-*/
+
 
 var closure1 = {
     print("hi")
@@ -680,7 +680,7 @@ var closure2 = { () -> Int in
 }
 
 
-var closure3 = { (x: Int) -> Int
+var closure3 = { (x: Int) -> Int in
     
     return x * 10
 }
@@ -692,4 +692,737 @@ var closure4 = { (a: String, b: String) -> String in
     
 return a + b
 }
+
+
+
+
+
+
+
+var closure4: (Int, Int) -> (Int) = { (first, second) -> Int in
+    
+    return first * second
+}
+
+print(closure4(3, 4))
+
+var kiran: (Int) -> (Int) = { x in
+
+for _ in 1...4
+{
+    print(x)
+}
+return x
+}
+
+print(kiran(2))
+
+func combineArrays(_ array1: [Int],
+                   _ array2: [Int],
+                   _ closure: (Int,Int) -> Int) -> [Int] {
+    var result: [Int] = []
+    for i in 0..<array1.count {
+        result.append(closure(array1[i],array2[i]))
+    }
+    return result
+}
+
+
+
+
+func kirannn(a: Int , _ closuree: () -> ()) -> Int
+{
+    for _ in 1...a
+{
+        closuree()
+    print("hello")
+    return a
+}
+}
+print(kirannn(a: 4, (44) -> ()))
+
+
+
+let numbers = [4, 7, 1, 9, 6, 5, 6, 9]
+
+let max = numbers.reduce(numbers[0]) {
+    if $0 > $1 {
+        return $0
+    } else {
+        return $1
+    }
+}
+
+print(max) // 9
+
+*/
+
+
+
+
+//1. Write a Swift program to compute the sum of the two integers. If the values are equal return the triple their sum.
+/*
+var str1: String?
+var str2: String?
+var int1: Int?
+var int2: Int?
+print("Enter the 1st value")
+str1=readLine()
+int1=Int(str1!)
+print("Enter the 2nd value")
+str2 = readLine()
+int2 = Int(str2!)
+if int1==int2
+    {
+        print((int1!+int2!) * 3)
+    }
+    else
+    {
+        print(int1!+int2!)
+    }
+
+................................................................................................
+
+//2. Write a Swift program to compute and return the absolute difference of n and 51, if n is over 51 return double the absolute difference
+ 
+
+ var str1: String?
+ var int1: Int?
+ print("Enter a number")
+ str1 = readLine()
+ int1 = Int(str1!)
+ if int1! > 51
+    {
+        print((int1!-51)*2)
+ 
+    }
+    else
+    {
+        print(51-int1!)
+    }
+ 
+ 
+ ................................................................................................
+
+3. Write a Swift program that accept two integer values and return true if one of them is 20 or if their sum is 20.
+ 
+
+ var str1: String?
+ var int1: Int?
+ print("Enter a value")
+ str1=readLine()
+ int1=Int(str1!)
+ var str2: String?
+ var int2: Int?
+ print("Enter another value")
+ str2 = readLine()
+ int2 = Int(str2!)
+ if int1! == 20 || int2! == 20 || (int1!+int2! == 20)
+ {
+ print("the result is true")
+ }
+ else{print("the result is false")
+ 
+ }
+
+ ................................................................................................
+
+4. Write a Swift program to accept two integer values and return true if one is negative and one is positive. Return true only if both are negative.
+
+
+var str1: String?
+var str2: String?
+var int1: Int?
+print("Enter a value")
+str1=readLine()
+int1=Int(str1!)
+var int2: Int?
+print("Enter another value")
+str2 = readLine()
+int2 = Int(str2!)
+if ((int1! < 0 && int2! > 0) || (int1! > 0 && int2! < 0) || (int1! < 0 && int2! < 0 ))
+{
+ print("the result is true")
+ }
+
+
+................................................................................................
+
+
+
+ 5. Write a Swift program to add "Is" to the front of a given string. However, if the string already begins with "Is", return the given string.
+ 
+
+print("Enter a string")
+var str1: String?
+ str1=readLine()
+print("the result")
+ if (str1!.hasPrefix("is") == true )
+ {
+    print(str1!)
+ }
+ else
+ {
+    print("is \(str1!)")
+ }
+
+................................................................................................
+
+
+8. Write a Swift program to add the last character (given string) at the front and back of a given string. The length of the given string must be 1 or more.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+9. Write a Swift program to check if a given non-negative number is a multiple of 3 or a multiple of 5.
+ 
+ */
+
+print("Enter a String")
+var str1: String?
+var int1: Int?
+str1=readLine()
+int1=Int(str1!)
+
+if (int1!>0 && int1!%3==0)
+{
+    print("The number is a multiple of 3")
+}
+
+if (int1!>0 && int1!%5==0)
+{
+    print("The number is multiple of 5")
+}
+
+
+
+/*10. Write a Swift program to take the first two characters from a given string and create a new string with the two characters added at both the front and back.
+ */
+/*
+ import Foundation
+ 
+ var greeting: String?
+ 
+ greeting=readLine()
+ 
+ 
+ 
+ 
+ var first = greeting![greeting!.startIndex]
+ print(first)
+ 
+ var second = greeting![greeting!.index(after: greeting!.startIndex)]
+ print(second)
+ greeting!.insert(greeting![greeting!.startIndex], at: greeting!.startIndex)
+ 
+ greeting!.insert( greeting![greeting!.index(greeting!.startIndex, offsetBy: 2)] , at: greeting!.endIndex)
+ print(greeting!)
+ */
+
+//11. Write a Swift program to test a given string whether it starts with "Is". Return true or false.
+/*
+ var str1:String?
+ str1=readLine()
+ if
+ str1!.hasPrefix("is") == true {
+ print(true)
+ }
+ else {
+ 
+ print(false)
+ 
+ }
+ 
+ 
+ */
+//12. Write a Swift program that return true if either of two given integers is in the range 10..30 inclusive.
+/*
+ import Foundation
+ var str1: String?
+ var int1: Int?
+ str1=readLine()
+ int1=Int(str1!)
+ var str2: String?
+ var int2: Int?
+ str2 = readLine()
+ int2 = Int(str2!)
+ if int1! >= 10 && int1! <= 30 && int2! >= 10 && int2! <= 30 {
+ print("true")
+ }
+ else{
+ print("false")
+ }
+ 
+ */
+
+//13. Write a Swift program to check if a given string begins with "fix", except the 'f' can be any character or number.
+/*
+ import Foundation
+ print("hellooo")
+ var str1: String?
+ //var int1: Int?
+ str1=readLine()
+ 
+ 
+ 
+ var str2: String?
+ 
+ 
+ if str1![str1!.index(after: str1!.startIndex)] == "i" && str1![str1!.index(str1!.startIndex, offsetBy: 2)] == "x" {
+ print("yes it starts with fix or @ix where  @can be any character")
+ }
+ 
+ 
+ if
+ str1!.hasPrefix("fix") == true {
+ print("yes it starts with fix or @ix where  @can be any character")
+ }
+ */
+
+
+
+//14. Write a Swift program to find the largest number among three given integers.
+/*
+ 
+ import Foundation
+ var str1: String?
+ var int1: Int?
+ str1=readLine()
+ int1=Int(str1!)
+ var str2: String?
+ var int2: Int?
+ str2 = readLine()
+ int2 = Int(str2!)
+ var str3: String?
+ var int3: Int?
+ str3 = readLine()
+ int3 = Int(str3!)
+ if(int1! > int2! && int1! > int3!)
+ {print("\(int1!) is greater")
+ 
+ }
+ if(int2! > int1! && int2! > int3!)
+ {print("\(int2!) is greater")
+ 
+ }
+ if(int3! > int1! && int3! > int2!)
+ {print("\(int3!) is greater")
+ 
+ }
+ */
+
+
+
+
+/*15. Write a Swift program that accept two integer values and to test which value is nearest to the value 10, or return 0 if both integers have same distance from 1
+ */
+/*
+ 
+ import Foundation
+ var str1: String?
+ var int1: Int?
+ str1=readLine()
+ int1=Int(str1!)
+ var str2: String?
+ var int2: Int?
+ str2 = readLine()
+ int2 = Int(str2!)
+ 
+ if(abs(10-int1!) > abs(10-int2!))
+ {print("\(int2!) is nearer")
+ 
+ }
+ if(abs(10-int1!) < abs(10-int2!))
+ {print("\(int1!) is nearer")
+ }
+ if(abs(10-int1!) == abs(10-int2!))
+ {print("both are at equal distance")
+ 
+ 
+ }
+ if(abs(1-int1!) == abs(1-int2!))
+ {print("0")
+ 
+ }
+ */
+//16. Write a Swift program that accept two integer values and test if they are both in the range 20..30 inclusive, or they are both in the range 30..40 inclusive.
+/*
+ import Foundation
+ var str1: String?
+ var int1: Int?
+ str1=readLine()
+ int1=Int(str1!)
+ var str2: String?
+ var int2: Int?
+ str2 = readLine()
+ int2 = Int(str2!)
+ if (int1! >= 20 && int1! <= 30 && int2! >= 20 && int2! <= 30 ){
+ print("it is in between range 20 and 30")
+ }
+ if (int1! >= 30 && int1! <= 40 && int2! >= 30 && int2! <= 40 ){
+ print("it is in between range 30 and 40")
+ }
+ 
+ */
+//17. Write a Swift program that accept two positive integer values and test whether the larger value is in the range 20..30 inclusive, or return 0 if neither is in that range.
+/*
+ import Foundation
+ var str1: String?
+ var int1: Int?
+ str1=readLine()
+ int1=Int(str1!)
+ var str2: String?
+ var int2: Int?
+ str2 = readLine()
+ int2 = Int(str2!)
+ if(int1! > int2!){
+ if (int1! >= 20 && int1! <= 30 ){
+ print("it is in between range 20 and 30")
+ 
+ }
+ else{print("false")}}
+ if(int2! > int1!){
+ if (int2! >= 20 && int2! <= 30 ){
+ print("it is in between range 20 and 30")
+ }
+ else{print("false")
+ }
+ 
+ }
+ 
+ */
+
+
+//19. Write a Swift program to convert the last three characters in upper case. If the string has less than 3 chars, lowercase whatever is there.
+//20. Write a Swift program to check if the first instance of "a" in a given string is immediately followed by another "a".
+/*
+ import Foundation
+ var str1: String?
+ str1=readLine()
+ 
+ var str2 = ""
+ let chars = str1!
+ 
+ for (index, str1!) in chars.enumerated() {
+ if index % 2 == 0 {
+ str2.append(str1)
+ }
+ }
+ print(str1!)
+ */
+//21. Write a Swift program to create a string made of every other char starting with the first from a given string. So "Python" will return "Pto"
+/*
+ import Foundation
+ var str1: String?
+ str1=readLine()
+ 
+ 
+ 
+ 
+ 
+ func answer(input: String) -> String {
+ var str1 = ""
+ let chars = input
+ 
+ for (index, char) in chars.enumerated() {
+ if index % 2 == 0 {
+ str1.append(char)
+ }
+ }
+ 
+ return str1
+ }
+ print(answer(input: str1!))
+ */
+//22. Write a Swift program to count the number of 7's in a given array of integers.
+/*
+ var numbers:[Int]=[]
+ 
+ print("enter elements")
+ var count=0
+ for i in 1...5{
+ 
+ var a=readLine()!
+ var x=Int(a)
+ numbers.append(x!)
+ if (x==7){
+ count+=1
+ }
+ //print("the 7's are\(count)")
+ 
+ }
+ print(numbers)
+ print("the 7's are \(count)")
+ 
+ */
+//23. Write a Swift program to check if one of the first 4 elements in a given array of integers is a 7. The length of the array may be less than 4.
+/*
+ var numbers:[Int]=[]
+ 
+ print("enter elements")
+ 
+ for i in 1...5{
+ 
+ var a=readLine()!
+ var x=Int(a)
+ numbers.append(x!)
+ if numbers.count < 3{
+ if (x==7){
+ print("it has 7 in its first 4 elements")
+ }
+ else{
+ print("it has  no 7 in its first 4 elements")
+ }
+ 
+ }
+ }
+ print(numbers)
+ */
+
+//24. Write a Swift program to test if the sequence of numbers 0, 1, 2 appears in a given array of integers somewhere.
+
+//25. Write a Swift program to create a new string where all the character "a" have been removed except the first and last positions.
+
+//26. Write a Swift program to create a string taking characters at indexes 0, 2, 4, 6, 8, .. from a given string.
+//27. Write a Swift program to count the number of times that two 7's are next to each other in a given array of integers.
+//28. Write a Swift program to test whether a value presents sequentially three times in an array of integers or not.
+
+
+// Write a function named min2 that takes two Int values, a and b, and returns the smallest one.
+
+
+/*
+ import Foundation
+ 
+ print("Hello, World!")
+ import Foundation
+ var str1:String?
+ var str2:String?
+ var x:Int?
+ var y:Int?
+ print("enter 1st value")
+ str1=readLine()
+ x=Int(str1!)
+ print("enter 2nd value")
+ str2=readLine()
+ y=Int(str2!)
+ func min2(x:Int , y:Int) -> Int{
+ return(x>y  ? x:y)
+ 
+ }
+ 
+ print(min2(x: x!,y: y!))
+ */
+
+//Write a function that takes an Int and returns it’s last digit. Name the function lastDigit.
+/*
+ import Foundation
+ var str1: String?
+ var int1: Int?
+ str1=readLine()
+ int1=Int(str1!)
+ var y :Int?
+ y=int1!
+ func lastDigit(y:Int) -> Int{
+ return(y%10)
+ }
+ print(lastDigit(y:y!))
+ */
+
+
+
+//Write a function named countdown that takes a number N. The function should print the numbers from N to 1with a one second pause in between and then write GO! in the end. To make the computer wait for one second call thesleep function from the standard library. The sleep function takes one parameter, the number of seconds to sleep.
+/*
+ import Foundation
+ var str1:String?
+ var n:Int?
+ print("enter value")
+ str1=readLine()
+ n=Int(str1!)
+ func countdown(n:Int)
+ {
+ var a = n
+ 
+ while(a>0)
+ {
+ print(a)
+ sleep(2)
+ a=a-1
+ }
+ print("Go!")
+ }
+ print(countdown(n:n!))
+ 
+ */
+
+//Implement the following functions. The divides function returns true if a is divisible by b and false otherwise. The countDivisors function should use the divides function to return the number of divisors of number. TheisPrime function should use the countDivisors function to determine if number is prime.
+/*
+ import Foundation
+ var str1:String?
+ var str2:String?
+ var x:Int?
+ var y:Int?
+ print("enter 1st value")
+ str1=readLine()
+ x=Int(str1!)
+ print("enter 2nd value")
+ str2=readLine()
+ y=Int(str2!)
+ func divides(x:Int,y:Int)->Bool{
+ return(x%y==0)
+ }
+ print(divides(x:x!,y:y!))
+ func countdivisor(x:Int)->Int{
+ var c=0
+ for i in 1...x
+ {
+ if(divides(x: x,y: i)){
+ c+=1
+ }
+ }
+ return(c)
+ }
+ print(countdivisor(x:x!))
+ func prime(x:Int)->Bool{
+ return(countdivisor(x: x)==2)
+ }
+ print(prime(x:x!))
+ */
+// Using isPrime write a function named printFirstPrimes that takes a parameter named count of type Int that prints the first count prime numbers.
+/*
+ 
+ import Foundation
+ 
+ print("Hello World")
+ func isprime(x:Int)->Int{
+ var c=0
+ 
+ for nun in 1...100{
+ if(x%nun == 0){
+ c+=1}
+ }
+ if c<=2{
+ print("prime number")
+ }
+ else{
+ print("not prime")
+ }
+ 
+ return(c)}
+ 
+ print(isprime(x:24))
+ 
+ */
+
+//Implement a function named repeatPrint that takes a string message and a integer count as parameters. The function should print the message count times and then print a newline.
+/*
+ print("enter count value")
+ var str1=readLine()!
+ var count=Int(str1)
+ print("enter the string")
+ var str2=readLine()!
+ func repeatprint(str2:String,count:Int){
+ var x=count
+ while(x>1){
+ print(str2)
+ x=x-1
+ }
+ }
+ 
+ 
+ print(repeatprint(str2: str2, count: count!))
+ 
+ 
+ */
+// Write a function named reverse that takes an array of integers named numbers as a parameter. The function should return an array with the numbers from numbers in reverse order.
+/*
+ import Foundation
+ 
+ func reverse(numbers:[Int])->[Int]{
+ 
+ print(numbers)
+ 
+ let revary = Array(numbers.reversed())
+ 
+ 
+ 
+ return(revary)
+ 
+ }
+ 
+ var numbers:[Int]=[]
+ 
+ print("enter elements")
+ 
+ for i in 1...5{
+ 
+ var a=readLine()!
+ 
+ var x=Int(a)
+ 
+ numbers.append(x!)
+ 
+ //print(numbers)
+ 
+ }
+ 
+ print(reverse (numbers: numbers))
+ 
+ */
+
+
+
+
+//Write a function named sum that takes an array of integers and returns their sum.
+/*
+ 
+ import Foundation
+ func sum(numbers:[Int])->Int{
+ 
+ let total = numbers.reduce(0, +)
+ 
+ return(total)
+ 
+ }
+ 
+ var numbers:[Int]=[]
+ //print("enter elements")
+ 
+ print("enter elements")
+ 
+ for i in 1...5{
+ 
+ 
+ var a=readLine()!
+ 
+ 
+ var x=Int(a)
+ 
+ 
+ numbers.append(x!)
+ 
+ }
+ print(sum (numbers: numbers))
+ */
+// Write a function named parse(digit:) that takes a string with one character as parameter. The function should return -1 if the input is not a digit character and the digit otherwise.
+
+
 
