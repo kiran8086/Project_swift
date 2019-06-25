@@ -8,6 +8,10 @@
 
 import Foundation
 
+
+
+
+
 /*
  
  //.....................
@@ -757,9 +761,12 @@ print(max) // 9
 
 */
 
-//...........................................
-//...........................................
-//...........................................
+
+
+
+//..........................................................
+//..........................................................
+//..........................................................
 
 
 //1. Write a Swift program to compute the sum of the two integers. If the values are equal return the triple their sum.
@@ -871,28 +878,19 @@ print("the result")
 ................................................................................................
 
 
-8. Write a Swift program to add the last character (given string) at the front and back of a given string. The length of the given string must be 1 or more.
+// 8. Write a Swift program to add the last character (given string) at the front and back of a given string. The length of the given string must be 1 or more.
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+var str1: String?
+print("Enter the string")
+str1 = readLine()
+var b = str1!
+var a = str1!.prefix(1)
+b.removeFirst(1)
+b.removeLast(1)
+str1!.removeFirst(str1!.count-1)
+print(str1! + b + a )
+
 
 9. Write a Swift program to check if a given non-negative number is a multiple of 3 or a multiple of 5.
  
@@ -1130,23 +1128,32 @@ if(int2! > int1!)
 
 
 
+
 //19. Write a Swift program to convert the last three characters in upper case. If the string has less than 3 chars, lowercase whatever is there.
  
  
+  var s1: String?
+  s1 = readLine()
+  if s1!.count < 3
+  {
+    s1!.lowercased()
+    print(s1!)
+  }
+  else
+  {
+  var newInput = s1!
+  var str1: String
+    _ = newInput.suffix(3)
+  newInput.removeLast(3)
+  _ = str1.uppercased()
+  str1.append(contentsOf: newInput)
+  str1.append(s1!.uppercased())
+  print(str1)
+  }
+
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
  ................................................................................................
 
  
@@ -1237,18 +1244,95 @@ for _ in 1...5
  }
  print(array1)
 
-...............................................................................................
- kiran
- 
- 
- 
+//...............................................................................................
+
+
 //24. Write a Swift program to test if the sequence of numbers 0, 1, 2 appears in a given array of integers somewhere.
 
+print("The number of 7's in the array of 1, 3, 5, 7, 7, 11, 13, 15 ")
+
+var cnt = 0
+let Numbers = [1, 3, 5, 7, 7, 11, 13, 15]
+var num = 0
+let third_Index = num + 2
+let second_Index = num + 1
+for num in Numbers
+{
+if second_Index < Numbers.endIndex && num == 1 && Numbers[second_Index] == 2 && Numbers[third_Index] == 3
+    {
+        print( "The sequence is present")
+    }
+else
+    {
+       print("Sequence is not present")
+    }
+}
+
+
+ 
 //25. Write a Swift program to create a new string where all the character "a" have been removed except the first and last positions.
 
+var name = "Kiran"
+var stringArray: [String] = []
+stringArray.append(name)
+var a = name
+let start = name.index(after: name.startIndex)
+let end = name.index(before: name.endIndex)
+let middle = start..<end
+while name.contains("a")
+{
+    var res = name.substring(with: middle)
+}
+print(name)
+
+ 
 //26. Write a Swift program to create a string taking characters at indexes 0, 2, 4, 6, 8, .. from a given string.
+ 
+
+ var cnt = 1
+ print("Enter a string")
+ var s1: String?
+ s1 = readLine()
+ var s2 = s1!
+while cnt < (s2.count) {
+ s2.remove(at: s2.index(s2.startIndex, offsetBy: cnt))
+ cnt += 1
+ }
+ print(s2)
+
+
 //27. Write a Swift program to count the number of times that two 7's are next to each other in a given array of integers.
+
+ var cnt = 0
+ var array1 = [5,6,7,8,5,6,7]
+ for (i, n) in array1.enumerated()
+ {
+ let var2 = i + 1
+ if var2 < input.endIndex && array1 == 7 && (input[nextIndex] == 7 )
+ {
+ cnt += 1
+ }
+ }
+ print(cnt)
+ 
+
 //28. Write a Swift program to test whether a value presents sequentially three times in an array of integers or not.
+ 
+ var s = [6,4,5,6,7,8]
+ for (i, s) in input.enumerated() {
+ let i3 = i + 2
+ let i2 = i + 1
+ 
+ if i2 < input.endIndex && s == input[secondIndex] && s == input[thirdIndex] {
+ print("YES IT HAS VALUES SEQUENTIALLY THREE TIMES")
+ break
+ }
+ 
+ }
+
+ 
+ 
+ 
 
 
  //....................................................
@@ -1257,7 +1341,7 @@ for _ in 1...5
  
  
  
- 
+/*
 
 //1. Write a Swift program to draw a HTML string as bold or italic text.
 
@@ -1804,10 +1888,10 @@ print(move(s!))
   print(reverse (numbers: numbers))
  
  
- */
+ 
 
 
-//Write a function named sum that takes an array of integers and returns their sum.
+// 8 Write a function named sum that takes an array of integers and returns their sum.
 
  
  func sum(n1:[Int])->Int
@@ -1825,13 +1909,339 @@ print(move(s!))
  }
  print(sum(n1: n1))
 
-// Write a function named parse(digit:) that takes a string with one character as parameter. The function should return -1 if the input is not a digit character and the digit otherwise.
+
+ 
+ // 9 Write a function named parse(digit:) that takes a string with one character as parameter. The function should return -1 if the input is not a digit character and the digit otherwise.
 
 
 
+ func parse(digit: String) -> Int
+ {
+ let a = "676767676868"
+ var x = 0
+    for _ in digit
+ {
+    let d = "\(a)"
+    if( d == digit)
+    {
+        return x
+    }
+    x += 1
+ }
+  return -1
+ }
+print("The Result is")
+print(parse(digit: "kiran"))
+
+ 
+ 
+*/
+//..................................................................
+//..................................................................
+//..................................................................
+//                              Closures
+
+
+/*
+
+//1. Write a function named applyKTimes that takes an integer K and a closure and calls the closure K times. The closure will not take any parameters and will not have a return value.
+
+ func applyKTimes(_ K: Int,_ closure: () -> ())
+ {
+ for _ in 1...K {
+ closure()
+ }
+ }
+ applyKTimes(3) {
+ print("Kiran Ramakrishnan Nair")
+ }
+
+//2.Use filter to create an array called multiples that contains all the multiples of 3 from numbers and then print it.
+
+
+ let array1 = [4,6,7,5,6,7,8,9,4,5,6]
+ let multiples = array1.filter { $0 % 3 == 0 }
+ print(multiples)
+ 
+ 
+
+//3.Find the largest number from numbers and then print it. Use reduce to solve this exercise.
+
+let numbers = [4, 7, 1, 9, 6, 5, 6, 9]
+ 
+ let large = numbers.reduce(numbers[0])
+ {
+ if ($0 > $1)
+ {
+ return $0
+ }
+ else
+ {
+ return $1
+ }
+ }
+ print(large)
+
+//4.Join all the strings from strings into one using reduce. Add spaces in between strings. Print your result.
+
+
+ let s = ["Kiran", "Ramakrishnan", "Nair"]
+ let a = s.reduce("") {
+ if ($0 == "")
+ {
+ return $1
+ }
+ else
+ {
+ return $0 + " " + $1
+ }
+ }
+ print(a)
+
+
+
+//5.Sort numbers in ascending order by the number of divisors. If two numbers have the same number of divisors the order in which they appear in the sorted array does not matter
+
+
+var a = [1, 2, 3, 4, 5, 6]
+ a.sort(by: { q, w in
+ func ascending(_ num: Int) -> Int {
+ var c = 0
+ for i in 1...num
+ {
+ if (num % i == 0)
+ {
+ c += 1
+ }
+ }
+ return c
+ }
+ return ascending(q) < ascending(w)
+ })
+
+
+
+//6.Find the sum of the squares of all the odd numbers from numbers and then print it. Use map, filter and reduce to solve this problem.
+
+
+ 
+ var values = [1, 2, 3, 4, 5, 6]
+ let result = values.filter {
+ $0 % 2 == 1
+ }.map
+ {
+ $0 * $0
+ }.reduce(0, +)
+ print(result)
+
+ 
+ 
+//7.Implement a function forEach(array: [Int], _ closure: Int -> ()) that takes an array of integers and a closure and runs the closure for each element of the array.
+
+ func forEach(_ array: [Int], _ closure: (Int) -> ())
+ {
+ for n in array
+ {
+ closure(n)
+ }
+ }
+ forEach([3,6,8,9])
+ {
+ print($0 + 1)
+ }
+
+
+
+
+//8.Implement a function combineArrays that takes 2 arrays and a closure that combines 2 Ints into a single Int. The function combines the two arrays into a single array using the provided closure.Assume that the 2 arrays have equal length.
+
+func combineArrays(_ a1: [Int],
+                   _ a2: [Int],
+                   _ closure: (Int,Int) -> Int) -> [Int] {
+    var result: [Int] = []
+    for i in 0..<a1.count {
+        result.append(closure(a1[i],a2[i]))
+    }
+    return result
+}
+var a1 = [1,2,3,4]
+var a2 = [5,5,5,3]
+combineArrays(a1,a2)
+{
+    $0 * $1
+}
+print(combineArrays([1,2,3,4] [5,6,7,8], (2, 4)))
+
+ 
+........................................................................
+........................................................................
+........................................................................
+
+                            Enum
+ 
+ 
+ 
+ 
+ 
+
+// 1 You are working on a game in which your character is exploring a grid-like map. You get the original location of the character and the steps he will take. A step .Up will increase the x coordinate by 1. A step .Down will decrease the x coordinate by 1. A step .Right will increase the y coordinate by 1. A step .Left will decrease the y coordinate by 1. Print the final location of the character after all the steps have been taken.
+
+ 
+
+enum movement
+{
+    case left
+    case right
+    case up
+    case down
+}
+var coordinates = (x:0, y:0)
+var steps:[movement] = [.up, .down, .down, .right, .left]
+
+for i in steps
+{
+    switch(i)
+    {
+    case .up: coordinates.x+=1
+        break
+    case .down: coordinates.x-=1
+        break
+    case .left: coordinates.y+=1
+        break
+    case .right: coordinates.y-=1
+        break
+    }
+}
+print(coordinates)
+
+
+
+// 2 Write a function named minmax that takes two integers and returns both the minimum and the maximum values inside a tuple.
+
+
+func minmax(_ x: Int, _ y: Int) -> (Int, Int) {
+    if (x < y)
+    {
+        return (x, y)
+    }
+    else
+    {
+        return (y, x)
+    }
+}
+print(minmax(3, 4))
+
+
+ */
+
+
+/*
+ 
+// 3
+ 
+ 1) Define an enumeration named HandShape with three members: .rock, .paper, .scissors. 2) Define an enumeration named MatchResult with three members: .win, .draw, .lose. 3) write a function called match that takes two hand shapes and returns a match result. It should return the outcome for the first player (the one with the first hand shape).
+
+ 
+ 
+
+enum HandShape
+{
+    case rock
+    case paper
+    case scissors
+}
+
+enum MatchResult
+{
+    case win
+    case draw
+    case lose
+}
+
+func match(_ s: HandShape, _ s: HandShape) -> MatchResult
+{
+    if f == s
+    {
+        return .draw
+    }
+    
+    if f == .rock && s == .scissors
+    {
+        return .win
+    }
+    
+    if s == .paper && s == .rock
+    {
+        return .win
+    }
+    
+    if f == .scissors && s == .paper
+    {
+        return .win
+    }
+    
+    return .lose
+}
 
 
 
  
+// 4 You are given 2 tuples of a, b type (Int,Int) representing fractions. The first value in the tuple represents the numerator, the second value represents the denominator. Create a new tuple sum of type (Int,Int) that holds the sum of the fractions.
+
  
- 
+
+var a = (1,3)
+var b = (6,8)
+
+let num = a.0 * b.1 + b.0 * a.1
+let den = a.1 * b.1
+var s = (num, den)
+print(s)
+
+
+
+
+
+// 5  You are given the CoinType enumeration which describes different coin values and moneyArray which has tuples(ammount, coinType). Print the total value of the coins in the array.
+
+enum CoinType: Int {
+    case penny = 5
+    case cent = 3
+    case rupees = 9
+}
+
+var moneyArray:[(Int,CoinType)] = [(7,.penny),(15,.cent),(8,.rupees)]
+var total = 0
+for (amount, coinType) in moneyArray
+{
+    total += amount * coinType.rawValue
+}
+
+print(total)
+
+
+ßß
+
+// 6  You are given an array of strings stored in the variable strings. Create a new array named countedStrings containing values of type (String,Int). Each tuple contains a string from the strings array followed by an integer indicating how many times it appears in the strings array. Each string should only appear once in thecountedStrings array.
+
+
+var names = ["kiran", "Rama", "krishnan", "Nair"]
+var countedStrings: [(String,Int)] = []
+for string in names {
+    var alreadyExists = false
+    
+    for i in 0..<countedStrings.count {
+        if (countedStrings[i].0 == string) {
+            countedStrings[i].1 += 1
+            alreadyExists = true
+        }
+    }
+    if alreadyExists == false {
+        _ = (string,1)
+        countedStrings.append((string,1))
+    }
+}
+
+*/
+
+
