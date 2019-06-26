@@ -8,12 +8,6 @@
 
 import Foundation
 
-
-
-
-
-
-
 //..........................................................
 //..........................................................
 //..........................................................
@@ -1531,25 +1525,29 @@ for string in names {
 }
 
  
- //Excercise - 6
+                                            //Excercise - 6
  //Program - 1
  
+ Create a collection of type [Any], including a few doubles, integers, strings, and booleans within the collection. Print the contents of the collection.
+ */
+
+ 
  var any = [Any]()
- any.append(12.12)
- any.append(12)
- any.append(&quot;Simran&quot;)
+ any.append(23.4)
+ any.append(32)
+ any.append(&quot;kiran_Nair&quot;)
  any.append(true)
- for items in any
+ for switch1 in any
  {
  switch items
  {
- case let DoubleEx as Double:
+ case let d1 as Double:
  print(&quot;Double value is \(DoubleEx)&quot;)
- case let IntEx as Int:
+ case let i1 as Int:
  print(&quot;Integer value is \(IntEx)&quot;)
- case let StringEx as String:
+ case let s1 as String:
  print(&quot;String value is \(StringEx)&quot;)
- case let BoolEx as Bool:
+ case let b1 as Bool:
  print(&quot;Boolean value is \(BoolEx)&quot;)
  default:
  print(&quot;None&quot;)
@@ -1557,25 +1555,29 @@ for string in names {
  }
  }
  */
- 
+
+
  //Program - 2
+
+//Loop through the collection. For each integer, print "The integer has a value of ", followed by the integer value. Repeat the steps for doubles, strings and booleans.
+
  /*
  var any = [Any]()
- any.append(12.12)
- any.append(12)
- any.append(&quot;Simran&quot;)
+ any.append(23.4)
+ any.append(32)
+ any.append(&quot;kiran_Nair&quot;)
  any.append(true)
- for items in any
+ for switch1 in any
  {
  switch items
  {
  case let DoubleEx as Double:
  print(&quot;The double has the value of: \(DoubleEx)&quot;)
- case let IntEx as Int:
+ case let i1 as Int:
  print(&quot;The integer has the value of: \(IntEx)&quot;)
- case let StringEx as String:
+ case let s1 as String:
  print(&quot;The string has the value of: \(StringEx)&quot;)
- case let BoolEx as Bool:
+ case let b1 as Bool:
  print(&quot;The boolean has the value of: \(BoolEx)&quot;)
  default:
  print(&quot;None&quot;)
@@ -1584,20 +1586,27 @@ for string in names {
  */
  
  //Program - 3
+
+//Create a [String : Any] dictionary, where the values are a mixture of doubles, integers, strings, and booleans. Print the key/value pairs within the collection
+
  /*
- var dict : [String : Any] = [&quot;Double&quot; : 21.12 , &quot;Integer&quot; : 21,&quot;Boolean&quot; : true, &quot;String&quot; : &quot;String&quot;]
+ var kiran1 : [String : Any] = [&quot;Double&quot; : 21.12 , &quot;Integer&quot; : 21,&quot;Boolean&quot; : true, &quot;String&quot; : &quot;String&quot;]
  
- for (Key,Value) in dict
+ for (Key,Value) in kiran1
  {
  print(&quot;Key is \(Key) and Value is \(Value)&quot;)
  }
  */
  
  //Program - 4
+
+//Create a variable `total` of type `Double` set to 0. Then loop through the dictionary, and add the value of each integer and double to your variable's value. For each string value, add 1 to the total. For each boolean, add 2 to the total if the boolean is `true`, or subtract 3 if it's `false`. Print the value of `total`.
+
  /*
  var total : Double = 0.0
- var dict : [String : Any] = [&quot;Double&quot; : 21.12 , &quot;Integer&quot; : 21, &quot;Boolean&quot; : true, &quot;String&quot;: &quot;Swift&quot;]
- for (key,value) in dict
+ var dictionary : [String : Any] = [&quot;Double&quot; : 21.12 , &quot;Integer&quot; : 21, &quot;Boolean&quot; : true, &quot;String&quot;: &quot;Swift&quot;]
+ 
+ for (key,value) in dictionary
  {
  switch value
  {
@@ -1625,9 +1634,12 @@ for string in names {
  */
  
  //Program - 5
- /*
+
+/*  Create a variable `total2` of type `Double` set to 0. Loop through the collection again, adding up all the integers and doubles. For each string that you come across during the loop, attempt to convert the string into a number, and add that value to the total. Ignore booleans. Print the total.
+
  var total : Double = 0.0
  var dict : [String : Any] = [&quot;Double&quot; : 21.12 , &quot;Integer&quot; : 21, &quot;String1&quot;: &quot;5&quot;, &quot;String&quot;: &quot;6&quot;]
+ 
  for (key,value) in dict
  {
  switch value
@@ -1646,13 +1658,14 @@ for string in names {
  */
  
  
- 
- 
- 
- //Excercise - 7
- 
- 
- 
+//Excercise - 7
+
+
+//You fitness tracking app may allow users to track different kinds of workouts. When architecting the app, you may decide to have a `Workout` base class from which other types of workout classes inherit. Below are three classes. `Workout` is the base class with `time` and `distance` properties, and `Run` and `Swim` are subclasses that add more specific properties to the `Workout` class.
+
+//Also provided is a `workouts` array that represents a log of past workouts. You'll use these classes and the array for the exercises below.
+
+ /*
  
  class Workout {
  
@@ -1697,7 +1710,9 @@ for string in names {
  }
  
  }
- 
+
+  // 1 Write simple functions called `describeRun(runningWorkout:)` and `describeSwim(swimmingWorkout:)` that take a `Run` object and a `Swim` object, respectively. Neither should return values. Each function should print a description of the workout, including the run's cadence or the swim's stroke. Time is represented in seconds, distance is represented in meters, and cadence is represented in steps per minute.
+
  func describeRun(runningWorkout: Run)
  
  {
@@ -1735,7 +1750,9 @@ for string in names {
  Run(cadence: 90, time: 358.9, distance: 1600)
  
  ]
- 
+
+  //2 Now loop through each workout in `workouts` and, using type casting, call either `describeRun(runningWorkout:)` or `describeSwim(swimmingWorkout:)` on each. Observe what is printed to the console.
+
  for res in workouts
  
  {
@@ -1764,4 +1781,6 @@ for string in names {
  
  }
  
- }*/
+ }
+ 
+ */
